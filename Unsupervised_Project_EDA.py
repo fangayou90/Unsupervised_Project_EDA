@@ -1,6 +1,4 @@
 
-# Unsupervised Learning Project: EDA on MODIS Vegetation Indices Dataset
-
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -48,6 +46,13 @@ sns.scatterplot(data=modis_data, x='Latitude', y='NDVI')
 plt.title("Latitude vs NDVI")
 plt.xlabel("Latitude")
 plt.ylabel("NDVI")
+plt.show()
+
+# Empirical Cumulative Distribution Function (CDF) of NDVI
+sns.ecdfplot(data=modis_data, x='NDVI')
+plt.title("CDF of NDVI")
+plt.xlabel("NDVI")
+plt.ylabel("Proportion")
 plt.show()
 
 # Check for missing data
